@@ -25,10 +25,18 @@ add.addEventListener("click", function() {
 
 
 deleteFirst.addEventListener("click", function (){
-    inside.deleteRow(0);
+    if (inside.rows.length > 0) {
+    inside.deleteRow(0) 
+    } else {
+        console.log("Nėra ką trinti")
+    }
 })
 
 deleteLast.addEventListener("click", function(){
+    if (inside.rows.length > 0) {
     inside.deleteRow(-1)
+    } else {
+        console.log("Nėra ką trinti")
+    }
 })
 
